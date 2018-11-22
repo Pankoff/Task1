@@ -10,6 +10,7 @@ public class Main {
     myMath.findMaxValue(listOfValue);
     myMath.findMinValue(listOfValue);
     myMath.findAverage(listOfValue);
+    myMath.findMedian(listOfValue);
         for (Integer i:listOfValue) {
             System.out.println(i);
         }

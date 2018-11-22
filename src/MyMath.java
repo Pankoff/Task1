@@ -1,17 +1,25 @@
+import java.util.Collections;
 import java.util.List;
 
 public class MyMath {
     public void findPercentile(List<Integer> listOfValue){}
-    public void findMedian(List<Integer> listOfValue){}
 
+    public void findMedian(List<Integer> listOfValue){
+        Collections.sort(listOfValue);
+        int halfColl=listOfValue.size()/2;
+        System.out.println("half=" + halfColl);
+        if(listOfValue.size()%2==0){
+            System.out.println("median " +((double)listOfValue.get(halfColl)+listOfValue.get(halfColl-1))/2);
+        }else System.out.println("median " +(listOfValue.get(halfColl)));
 
+    }
 
     public void findAverage(List<Integer> listOfValue){
-        int summ=0;
+        int sum=0;
         for (Integer i:listOfValue) {
-            summ+=i;
+            sum+=i;
         }
-        System.out.println("average " + summ/((double)listOfValue.size()));
+        System.out.println("average " + sum/((double)listOfValue.size()));
     }
 
     public void findMaxValue(List<Integer> listOfValue){

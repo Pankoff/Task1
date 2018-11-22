@@ -6,7 +6,7 @@ import java.util.List;
 public class MyMath {
     public void findPercentile(List<Integer> listOfValue){
         int tmp=(listOfValue.size()*90)/100;
-        System.out.println("percentile "+listOfValue.get(tmp));
+        System.out.println("percentile "+listOfValue.get(tmp-1));
     }
 
     public void findMedian(List<Integer> listOfValue){

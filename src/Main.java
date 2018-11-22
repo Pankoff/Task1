@@ -17,7 +17,7 @@ public class Main {
     public static void readFile(List<Integer> listOfValue){
         String tmp=null;
     try(BufferedReader reader = new BufferedReader(new InputStreamReader
-            (new FileInputStream(new File("Numbers")), "utf-8" ))){
+            (new FileInputStream(new File("../Numbers")), "utf-8" ))){
         while ((tmp=reader.readLine())!=null){
             listOfValue.add(Integer.parseInt(tmp));
             }

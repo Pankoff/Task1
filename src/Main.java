@@ -6,14 +6,14 @@ public class Main {
     String path="C:\\Users\\Павел\\Desktop\\Value.txt";
     List<Integer> listOfValue = new ArrayList<>();
     readFile(listOfValue,path);
+    Collections.sort(listOfValue);
     MyMath myMath = new MyMath();
+    myMath.findPercentile(listOfValue);
     myMath.findMaxValue(listOfValue);
     myMath.findMinValue(listOfValue);
     myMath.findAverage(listOfValue);
     myMath.findMedian(listOfValue);
-        for (Integer i:listOfValue) {
-            System.out.println(i);
-        }
+
     }
     public static void readFile(List<Integer> listOfValue, String path){
         File file = new File(path);

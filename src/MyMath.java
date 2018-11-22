@@ -1,13 +1,16 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 public class MyMath {
-    public void findPercentile(List<Integer> listOfValue){}
+    public void findPercentile(List<Integer> listOfValue){
+        int tmp=(listOfValue.size()*90)/100;
+        System.out.println("percentile "+listOfValue.get(tmp));
+    }
 
     public void findMedian(List<Integer> listOfValue){
-        Collections.sort(listOfValue);
         int halfColl=listOfValue.size()/2;
-        System.out.println("half=" + halfColl);
         if(listOfValue.size()%2==0){
             System.out.println("median " +((double)listOfValue.get(halfColl)+listOfValue.get(halfColl-1))/2);
         }else System.out.println("median " +(listOfValue.get(halfColl)));

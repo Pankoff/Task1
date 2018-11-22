@@ -3,9 +3,8 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-    String path="C:\\Users\\Павел\\Desktop\\Value.txt";
     List<Integer> listOfValue = new ArrayList<>();
-    readFile(listOfValue,path);
+    readFile(listOfValue);
     Collections.sort(listOfValue);
     MyMath myMath = new MyMath();
     myMath.findPercentile(listOfValue);
@@ -15,12 +14,13 @@ public class Main {
     myMath.findMedian(listOfValue);
 
     }
-    public static void readFile(List<Integer> listOfValue, String path){
-        File file = new File(path);
-        try(Scanner scanner = new Scanner(file)){
-            while (scanner.hasNextLine()){
-                listOfValue.add(scanner.nextInt());
+    public static void readFile(List<Integer> listOfValue){
+        String tmp=null;
+    try(BufferedReader reader = new BufferedReader(new InputStreamReader
+            (new FileInputStream(new File("Numbers")), "utf-8" ))){
+        while ((tmp=reader.readLine())!=null){
+            listOfValue.add(Integer.parseInt(tmp));
             }
-        }catch (FileNotFoundException ex){ex.printStackTrace();}
+        }catch (IOException ex){ ex.printStackTrace();}
     }
 }
